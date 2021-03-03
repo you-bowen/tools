@@ -1,6 +1,6 @@
-def reg_group(groupName, group):
+def reg_group(itemname,groupName, group):
     # 传入字符串数组！，否则后果自负
-    group = '[HKEY_CLASSES_ROOT\{}\shell\Managerment]\n"MUIVerb"="{}"\n"SubCommands"="{}"\n\n'.format(Range,
+    group = '[HKEY_CLASSES_ROOT\{}\shell\{}]\n"MUIVerb"="{}"\n"SubCommands"="{}"\n\n'.format(Range, itemname,
                                                                                                       groupName, ';'.join(group))
     return group
 
@@ -14,7 +14,7 @@ def create_group(group, paths):
 
     return res
 
-
+itemname = 'Managerment'
 groupName, group = 'pwn', ["idax96","x96dbg",
                            "52od", "DIE"]  # 需要更改
 paths = ["C:\\pwntools\\ida75\\idax96.exe",
@@ -29,5 +29,5 @@ Range = "*"  # ['exefile', ...]
 st = 'Windows Registry Editor Version 5.00\n'
 with open('temp.reg', 'w') as f:
     f.write(st)
-    f.write(reg_group(groupName, group))
+    f.write(reg_group(itemname, groupName, group))
     f.write(create_group(group, paths))
