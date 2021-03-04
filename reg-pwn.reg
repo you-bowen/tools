@@ -1,0 +1,29 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\*\shell\Managerment]
+"MUIVerb"="pwn"
+"SubCommands"="idax96;x96dbg;52od;DIE"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\idax96]
+@="idax96"
+"Icon"="\"C:\\pwntools\\ida75\\idax96.exe\", 4"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\idax96\Command]
+@="\"C:\\pwntools\\ida75\\idax96.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\x96dbg]
+@="x96dbg"
+"Icon"="\"C:\\pwntools\\x64dbg\\release\\x96dbg.exe\", 4"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\x96dbg\Command]
+@="\"C:\\pwntools\\x64dbg\\release\\x96dbg.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\52od]
+@="52od"
+"Icon"="\"C:\\pwntools\\wuaiOD\\52od.exe\", 4"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\52od\Command]
+@="\"C:\\pwntools\\wuaiOD\\52od.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\DIE]
+@="DIE"
+"Icon"="\"C:\\pwntools\\die\\die.exe\", 4"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\DIE\Command]
+@="\"C:\\pwntools\\die\\die.exe\" \"%1\""
+
