@@ -18,6 +18,7 @@ def create_group(group, paths):
 groupName, group = 'sys', ["regedit","taskmgr"]  # 需要更改
 paths = ["C:\\Windows\\regedit.exe",
          "C:\\Windows\\System32\\Taskmgr.exe"]  # 需要更改
+# 防火墙 - "C:\\Windows\\System32\\WF.msc" 暂时无法使用
 # ["idax64", "idax86", "x64dbg", "ollygdb", "DIE"]
 
 
