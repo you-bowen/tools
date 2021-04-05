@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['idax96.py'],
+a = Analysis(['vscode.py'],
              pathex=['C:\\Users\\27564\\Desktop\\tools'],
              binaries=[],
              datas=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='idax96',
+          name='vscode',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
