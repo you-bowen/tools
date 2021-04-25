@@ -24,7 +24,7 @@ path = r'C:\Users\{}\AppData\Roaming\Code\User\snippets\{}.json'.format(
 with open(path) as f:
     data = json.load(f)
 
-with open(filename) as f:
+with open(filename,encoding='utf-8') as f:
     content = f.read()
     new = {}
     new['prefix'] = snipName
