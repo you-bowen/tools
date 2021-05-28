@@ -11,7 +11,7 @@ langDict = {'py': 'python',
             'js': 'javascript',
             'vue': 'vue',
             'css': 'css',
-            'json':'json'}
+            'json': 'json'}
 
 if suffix in langDict.keys():
     lang = langDict[suffix]
@@ -21,10 +21,15 @@ else:
 
 path = r'C:\Users\{}\AppData\Roaming\Code\User\snippets\{}.json'.format(
     os.getlogin(), lang)
-with open(path) as f:
-    data = json.load(f)
 
-with open(filename,encoding='utf-8') as f:
+try:
+    with open(path) as f:
+        data = json.load(f)
+except:
+    print("请删除对应json文件中的注释，json.load(f)不能解析注释内容！")
+    exit()
+
+with open(filename, encoding='utf-8') as f:
     content = f.read()
     new = {}
     new['prefix'] = snipName
