@@ -12,11 +12,11 @@ def is_64bit_pe(filename):
 filepath = sys.argv[1]
 if filepath.endswith('.exe'):
     if is_64bit_pe(filepath):
-        subprocess.Popen(r'C:\pwntools\ida75\75ida64.exe '+filepath)
+        subprocess.Popen(r'C:\pwntools\ida75\75ida64.exe '+'"'+filepath+'"')
     else:
-        subprocess.Popen(r'C:\pwntools\ida75\75ida.exe '+filepath)
+        subprocess.Popen(r'C:\pwntools\ida75\75ida.exe '+'"'+filepath+'"')
 else:
     if is_64bit_elf(filepath):
-        subprocess.Popen(r'C:\pwntools\ida75\75ida64.exe '+filepath,shell=False)
+        subprocess.Popen(r'C:\pwntools\ida75\75ida64.exe '+'"'+filepath+'"',shell=False)
     else:
-        subprocess.Popen(r'C:\pwntools\ida75\75ida.exe '+filepath)
+        subprocess.Popen(r'C:\pwntools\ida75\75ida.exe '+'"'+filepath+'"')
