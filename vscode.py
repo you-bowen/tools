@@ -11,7 +11,8 @@ langDict = {'py': 'python',
             'js': 'javascript',
             'vue': 'vue',
             'css': 'css',
-            'json': 'json'}
+            'json': 'json',
+            'sh': 'shellscript'}
 
 if suffix in langDict.keys():
     lang = langDict[suffix]
