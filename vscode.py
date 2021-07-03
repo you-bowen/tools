@@ -1,6 +1,10 @@
+#!/usr/bin/python
 import json
 import os
 import sys
+import platform
+
+is_linux = platform.platform()[:5] == "Linux"
 
 filename = sys.argv[1]
 snipName, suffix = filename.split('.')
@@ -20,7 +24,8 @@ else:
     print('{} is not included in your vscode snippets'.format(suffix))
     exit()
 
-path = r'C:\Users\{}\AppData\Roaming\Code\User\snippets\{}.json'.format(
+path = r"/home/{}/.config/Code - Insiders/User/snippets/{}.json".format(
+    os.getlogin(), lang)if is_linux else r'C:\Users\{}\AppData\Roaming\Code\User\snippets\{}.json'.format(
     os.getlogin(), lang)
 
 try:
